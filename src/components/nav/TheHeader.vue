@@ -10,7 +10,7 @@
         </li>
         <li>
           <router-link to="/cart">Cart</router-link>
-          <base-badge mode="elegant">{{ cart.qty }}</base-badge>
+          <base-badge mode="elegant">{{ cartQuantity }}</base-badge>
         </li>
         <li v-if="isLoggedIn">
           <router-link to="/admin">Admin</router-link>
@@ -26,7 +26,6 @@
 
 <script>
 export default {
-  inject: ['isLoggedIn', 'login', 'logout', 'cart'],
 };
 </script>
 
@@ -54,6 +53,7 @@ li {
 }
 
 a {
+  outline:none;
   text-decoration: none;
   color: #333;
   font-weight: bold;
@@ -69,6 +69,7 @@ a.router-link-active {
 }
 
 button {
+  outline:none;
   font: inherit;
   cursor: pointer;
   padding: 0.5rem 1.5rem;
