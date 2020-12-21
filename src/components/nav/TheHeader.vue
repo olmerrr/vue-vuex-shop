@@ -26,6 +26,11 @@
 
 <script>
 export default {
+  computed: {
+    cartQuantity() {
+      return this.$store.getters['cart/quantity']
+    },
+  },
 };
 </script>
 
